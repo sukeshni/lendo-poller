@@ -36,7 +36,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-// import AWS from 'aws-sdk';
 var AWS = require("aws-sdk");
 var sqs_consumer_1 = require("sqs-consumer");
 require("dotenv/config");
@@ -77,7 +76,7 @@ app.on('processing_error', function (err) {
     console.error(err.message);
 });
 app.start();
-console.log("Watching my master SQS ...");
+console.log("Watching SQS ...");
 var BankPollingTask = function (applicationId, stopPolling) { return __awaiter(void 0, void 0, void 0, function () {
     var response;
     return __generator(this, function (_a) {
